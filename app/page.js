@@ -3,6 +3,9 @@ import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import WhyChooseUs from "./components/WhyChooseUs";
 import TechInfused from "./components/TechInfused";
+import HowToUse from "./components/HowToUse";
+import LidSection from "./components/LidSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -27,6 +30,14 @@ export default function Home() {
 
       <section>
         <HowToUse />
+      </section>
+
+      <section>
+        <LidSection />
+      </section>
+
+      <section id="footer">
+        <Footer />
       </section>
 
     </div>
