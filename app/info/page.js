@@ -31,13 +31,16 @@ export default function page() {
         </div>
       </div>
 
-      <div className='relative w-full h-[10vh] bg-[#E3E3E3]'>
-        <div className="outer-circle-info z-30 absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#E3E3E3] rounded-full flex items-center justify-center">
-          <div className="w-18 h-18 bg-black rounded-full flex items-center justify-center">
-            <HiOutlineArrowDown className="text-4xl text-white" />
+      <div className='relative flex items-center w-full h-[20vh] bg-[#E3E3E3] md:mt-10'>
+        <div className="outer-circle-info z-30 absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 2xl:w-48 2xl:h-48 bg-[#E3E3E3] rounded-full flex items-center justify-center">
+          <div className="w-18 h-18 2xl:w-36 2xl:h-36 bg-black rounded-full flex items-center justify-center">
+            <HiOutlineArrowDown className="text-4xl 2xl:text-[5vh] text-white" />
           </div>
         </div>
+        <p className='px-10 font-poppins text-sm xl:text-xl 2xl:text-3xl'>CHECK OUT OUR PRODUCTS</p>
       </div>
+
+      <div></div>
 
     </div>
   )
