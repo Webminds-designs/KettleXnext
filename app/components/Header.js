@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
 
@@ -12,6 +13,7 @@ export default function Header() {
 
     const menuRef = useRef(null);
     const hamburgerRef = useRef(null);
+    const router = useRouter();
 
     // Hide header on scroll down and show on scroll up
     useEffect(() => {
@@ -52,8 +54,8 @@ export default function Header() {
     const navItems = [
         { label: "HOME", target: "hero" },
         { label: "ABOUT US", target: "aboutus" },
-        { label: "INFO", target: "whychooseus" },
-        { label: "CONTACT US", target: "footer" },
+        { label: "INFO", target: "info" },
+        { label: "CONTACT US", target: "contactus" },
     ];
 
     // Handle navigation
@@ -61,9 +63,22 @@ export default function Header() {
         console.log("Clicked on:", item.target);
         setActive(item.target);
 
+        // Check if this is a page navigation item
+        if (["aboutus", "info", "contactus"].includes(item.target)) {
+            setMobileMenuOpen(false);
+            router.push(`/${item.target}`);
+            return;
+        }
+
+        // For other items, scroll to the section
         const section = document.getElementById(item.target);
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Close mobile menu after clicking
+        if (mobileMenuOpen) {
+            setMobileMenuOpen(false);
         }
     };
 
