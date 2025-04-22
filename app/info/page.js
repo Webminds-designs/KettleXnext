@@ -1,6 +1,8 @@
 "use client"
 import React from 'react'
 import Header from './Header'
+import { HiOutlineArrowDown } from "react-icons/hi";
+import "../assets/css/Hero.css"
 
 export default function page() {
   return (
@@ -29,7 +31,14 @@ export default function page() {
         </div>
       </div>
 
-      
+      <div className='relative w-full h-[10vh] bg-[#E3E3E3]'>
+        <div className="outer-circle-info z-30 absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#E3E3E3] rounded-full flex items-center justify-center">
+          <div className="w-18 h-18 bg-black rounded-full flex items-center justify-center">
+            <HiOutlineArrowDown className="text-4xl text-white" />
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
