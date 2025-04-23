@@ -2,7 +2,7 @@
 import React from 'react'
 import Header from './Header'
 import Footer from '../components/Footer';
-import { HiOutlineArrowDown } from "react-icons/hi";
+import { HiOutlineArrowDown, HiOutlineArrowUp } from "react-icons/hi";
 import "../assets/css/Hero.css"
 import ColorChangeText from '../components/ColorChangeText';
 import { motion } from 'motion/react';
@@ -19,17 +19,17 @@ export default function page() {
 
       {/* header images */}
       <div className='flex justify-between w-full'>
-        <motion.img 
-          src="/images/kettle1.jpg" 
-          alt="Kettlex" 
+        <motion.img
+          src="/images/kettle1.jpg"
+          alt="Kettlex"
           className='w-[10em] md:w-[15em] lg:w-[20em] xl:w-[30em] 2xl:w-[40em] h-[6em] md:h-[8em] lg:h-[10em] xl:h-[15em] 2xl:h-[20em] object-cover rounded-r-2xl rounded-b-2xl md:rounded-r-4xl md:rounded-b-4xl'
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
-        <motion.img 
-          src="/images/kettle2.jpg" 
-          alt="Kettlex" 
+        <motion.img
+          src="/images/kettle2.jpg"
+          alt="Kettlex"
           className='w-[5em] md:w-[8em] lg:w-[10em] xl:w-[15em] 2xl:w-[20em] h-[6em] md:h-[8em] lg:h-[10em] xl:h-[15em] 2xl:h-[20em] object-cover rounded-l-2xl rounded-b-2xl md:rounded-l-4xl md:rounded-b-4xl'
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -38,7 +38,7 @@ export default function page() {
       </div>
 
       {/* heading */}
-      <motion.p 
+      <motion.p
         className='flex flex-col text-center font-poppins text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold pt-10'
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,16 +51,16 @@ export default function page() {
 
       {/* 2 background images */}
       <div className='flex flex-col lg:flex-row w-full justify-between pt-10'>
-        <motion.img 
-          src='/images/kettle3.jpg' 
+        <motion.img
+          src='/images/kettle3.jpg'
           className='w-full lg:w-1/2'
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.2 }}
         />
-        <motion.img 
-          src='/images/kettle4.jpg' 
+        <motion.img
+          src='/images/kettle4.jpg'
           className='w-full lg:w-1/2'
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ export default function page() {
       <div className='flex flex-col lg:flex-row w-full h-[60em] lg:h-[30em] xl:h-[40em] 2xl:h-[60em] justify-between items-center pt-10'>
         <div style={{ backgroundImage: 'url("/images/kettle5.jpg")' }} className='w-full lg:w-1/2 h-full rounded-4xl bg-cover bg-no-repeat'></div>
         <div className='flex items-center w-full lg:w-1/2 h-full'>
-          <ColorChangeText 
+          <ColorChangeText
             text="Welcome to Kettlex —your sleek and smart kettle companion designed to bring precision, safety, and simplicity to your everyday brewing ritual."
             className='font-poppins text-center lg:text-left text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl px-10 uppercase'
             startColor="#999999"
@@ -131,7 +131,7 @@ export default function page() {
 
       {/* kettlex in colors */}
       <div className='flex flex-col bg-[#E3E3E3] py-10 lg:py-20 xl:py-40 px-10 gap-y-10 xl:gap-y-20'>
-        <motion.p 
+        <motion.p
           className='uppercase font-poppins font-semibold text-base lg:text-lg xl:text-2xl 2xl:text-5xl'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -166,8 +166,8 @@ export default function page() {
 
                 {/* Pricing tiers */}
                 {tiers.map((tier, idx) => (
-                  <motion.div 
-                    key={idx} 
+                  <motion.div
+                    key={idx}
                     className="flex items-center mb-16 relative"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -239,6 +239,15 @@ export default function page() {
           Your browser does not support the video tag.
         </video>
       </div>
+
+      {/* up arrow below video */}
+      <div className='relative'>
+        <div className="absolute -top-[5vh] right-[5vh] w-[10vh] h-[10vh] bg-black rounded-full flex items-center justify-center">
+          <HiOutlineArrowUp className="text-4xl 2xl:text-[5vh] text-white" />
+        </div>
+      </div>
+
+      <div className='h-[5vh]' />
 
       {/* footer */}
       <Footer />
