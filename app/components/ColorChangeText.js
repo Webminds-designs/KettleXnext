@@ -18,7 +18,7 @@ const ColorChangeText = ({ text, className, startColor = '#999999', endColor = '
       
       letters.forEach((letter, i) => {
         // Calculate delay based on letter position
-        const delay = (i / letters.length) * 0.3; // Adjust delay as needed
+        const delay = (i / letters.length) * 0.5; // Adjust delay as needed
         const letterProgress = Math.min(Math.max((scrollPercent - delay) * 2, 0), 1);
         
         letter.style.color = calculateColor(startColor, endColor, letterProgress);
