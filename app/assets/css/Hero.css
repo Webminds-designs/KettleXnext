@@ -33,4 +33,34 @@
   
   
 
+  .outer-circle-info::before {
+    content: "";
+    position: absolute;
+    bottom: 3rem;
+    width: 1rem; 
+    height: 0.8rem; 
+    background-color: transparent; 
+    border-radius:  0 0 100% 0 ;
+    box-shadow: 5px 3px 0 2px #E3E3E3;
+    transform: rotate(4deg);
+  }
   
+  .outer-circle-info::after {
+    content: "";
+    position: absolute;
+    bottom: 3rem;
+    width: 1rem; 
+    height: 0.8rem; 
+    background-color: transparent;
+    border-radius:  0 0 0 100% ;
+    box-shadow: -5px 3px 0 2px #E3E3E3;
+    transform: rotate(-4deg);
+  }
+
+  .outer-circle-info::before {
+    left: -0.95rem; 
+  }
+  
+  .outer-circle-info::after {
+    right: -0.95rem; 
+  } 
