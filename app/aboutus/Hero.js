@@ -25,7 +25,7 @@ const Hero = () => {
           <img
             src="/images/earth.png"
             alt="Earth"
-            className="w-48 sm:w-64 md:w-80 lg:w-96"
+            className="w-48 sm:w-64 md:w-80 lg:w-[35rem]"
           />
         </div>
       </div>
@@ -38,14 +38,14 @@ const Hero = () => {
             <img
               src="/images/hero1.jpg"
               alt="Hero1"
-              className="rounded-t-3xl lg:rounded-3xl object-cover w-full h-64 md:h-80 lg:-mt-20 lg:ml-20 lg:w-70 lg:h-[33rem]"
+              className="rounded-t-3xl lg:rounded-3xl object-cover w-full h-64 md:h-80 lg:-mt-20 lg:ml-20 lg:w-70 lg:h-[38rem]"
             />
           </div>
           <div className="z-0 hidden lg:block">
             <img
               src="/images/hero2.jpg"
               alt="Hero2"
-              className="rounded-3xl -mt-20 -ml-30 w-fit h-[33rem]"
+              className="rounded-3xl -mt-20 -ml-30 w-fit h-[38rem]"
             />
           </div>
         </div>
@@ -67,22 +67,22 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col w-full items-center lg:items-start gap-3 mt-6">
-            <div className="text-sm sm:text-base lg:text-[16px] text-gray-700 flex flex-col gap-3 w-full">
-              <div className="flex items-center justify-center text-center">
+            <div className="text-sm sm:text-base lg:text-[16px] text-gray-700 flex flex-col gap-3 w-full pl-10">
+              <div className="flex items-center justify-start text-left">
                 Precision temperature control for every brew
               </div>
-              <div className="flex items-center justify-center text-center">
+              <div className="flex items-center justify-start text-left">
                 Sleek design that elevates your countertop
               </div>
-              <div className="flex items-center justify-center text-center">
+              <div className="flex items-center justify-start text-left">
                 Safe, intuitive features for everyday ease
               </div>
-              <div className="flex items-center justify-center text-center">
+              <div className="flex items-center justify-start text-left">
                 Built with quality and durability in mind
               </div>
             </div>
-            <div className="flex justify-center w-full mt-8">
-              <div className="flex justify-center items-center w-[180px] h-[60px] rounded-full bg-black transform transition hover:scale-105">
+            <div className="flex justify-start w-full mt-8 pl-10">
+              <div className="flex justify-start items-center w-[220px] h-[60px] rounded-full bg-black transform transition hover:scale-105">
                 <button className="text-white font-medium w-full h-full text-lg">
                   Buy
                 </button>
