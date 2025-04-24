@@ -215,7 +215,7 @@ const Hero = () => {
               <motion.div 
                 whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" }}
                 whileTap={{ scale: 0.98 }}
-                className="flex justify-start items-center w-[220px] h-[60px] rounded-full bg-black transform transition"
+                className="flex justify-start items-center w-[100px] h-[40px] md:w-[220px] md:h-[60px] rounded-full bg-black transform transition"
               >
                 <button className="text-white font-medium w-full h-full text-lg">
                   Buy

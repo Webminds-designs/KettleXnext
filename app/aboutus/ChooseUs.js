@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import { motion } from "framer-motion";
+import Description from "./Description";
 
 const ChooseUs = () => {
   // Enhanced animation variants to match page.js
@@ -61,41 +62,7 @@ const ChooseUs = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {/* Section Heading */}
-      <motion.div 
-        className="text-[26px] sm:text-[30px] md:text-[36px] font-bold text-center"
-        variants={fadeInDown}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        WHY CHOOSE US
-      </motion.div>
-      
-      {/* Mission Statement */}
-      <motion.div 
-        className="text-[28px] sm:text-[36px] md:text-[45px] lg:text-[60px] text-center uppercase mt-6 sm:mt-8 md:mt-10"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        To lead{" "}
-        <motion.span 
-          className="text-gray-400"
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 1, delay: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          {" "}
-          the evolution of everyday <br className="hidden sm:block" /> appliances by merging design, <br className="hidden sm:block" />
-          functionality, and smart technology <br className="hidden sm:block" /> — empowering people to live
-          better <br className="hidden sm:block" />
-          through small, meaningful <br className="hidden sm:block" /> improvements.
-        </motion.span>
-      </motion.div>
+      <Description />
       
       {/* First Row of People Images */}
       <motion.div 
