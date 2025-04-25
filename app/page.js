@@ -20,7 +20,7 @@ export default function Home() {
       // Give a slight delay to ensure smooth transition
       setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 2000);
       return true;
     }
     return false;
