@@ -31,7 +31,7 @@ const Description = () => {
       <div className="text-center uppercase">
         <AnimatedTextGSAP 
           textSegments={textSegments} 
-          customClass="text-[20px] md:text-[40px] lg:text-[60px] text-gray-400 text-center" 
+          customClass="text-[20px] md:text-[40px] lg:text-[60px] text-black text-center" 
           isSegmented={true}
         />
       </div>

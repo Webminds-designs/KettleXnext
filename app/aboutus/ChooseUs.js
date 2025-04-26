@@ -190,7 +190,7 @@ const ChooseUs = () => {
         {/* Overlay Text and Button */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-4">
           <motion.div 
-            className="text-white text-[24px] sm:text-[32px] md:text-[40px] lg:text-[50px] uppercase font-bold"
+            className="text-white text-[16px] sm:text-[32px] md:text-[40px] lg:text-[50px] uppercase font-bold"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -217,7 +217,7 @@ const ChooseUs = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.div 
-              className="w-32 sm:w-36 md:w-40 h-10 sm:h-12 md:h-13 bg-white text-black flex items-center justify-center rounded-3xl cursor-pointer hover:bg-gray-100 transition-colors"
+              className="w-24 sm:w-36 md:w-40 h-10 sm:h-12 md:h-13 bg-white text-black flex items-center justify-center rounded-3xl cursor-pointer hover:bg-gray-100 transition-colors"
               whileHover={{ 
                 scale: 1.05, 
                 boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" 
