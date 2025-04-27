@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function Header() {
 
@@ -14,6 +14,8 @@ export default function Header() {
     const menuRef = useRef(null);
     const hamburgerRef = useRef(null);
     const router = useRouter();
+    const pathname = usePathname();
+    const isHome = pathname === '/';
 
     // Hide header on scroll down and show on scroll up
     useEffect(() => {
@@ -50,6 +52,22 @@ export default function Header() {
             document.removeEventListener("mousedown", handleClickOutside);
     }, [mobileMenuOpen]);
 
+    // Add this effect after your other useEffect hooks
+    useEffect(() => {
+        // Set the active state based on current pathname
+        if (pathname === '/') {
+            setActive('hero');
+        } else if (pathname.startsWith('/')) {
+            // Remove the leading slash and use as target
+            const path = pathname.substring(1);
+            // Check if this path matches any of our navigation items
+            const matchingItem = navItems.find(item => item.target === path);
+            if (matchingItem) {
+                setActive(matchingItem.target);
+            }
+        }
+    }, [pathname]);
+
     // Define navigation 
     const navItems = [
         { label: "HOME", target: "hero" },
@@ -69,8 +87,15 @@ export default function Header() {
             router.push(`/${item.target}`);
             return;
         }
+        
+        // Handle HOME navigation when not on home page
+        if (item.target === "hero" && pathname !== "/") {
+            setMobileMenuOpen(false);
+            router.push("/");
+            return;
+        }
 
-        // For other items, scroll to the section
+        // For other items or if already on home page, scroll to the section
         const section = document.getElementById(item.target);
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
@@ -91,11 +116,11 @@ export default function Header() {
                 <div className="container mx-auto flex justify-between items-center font-medium">
                     {/* Logo */}
                     <div className="lg:ml-12">
-                        <img src={'/images/logo.png'} alt="Logo" className="h-10 w-auto" />
+                        <img src={isHome ? '/images/logo.png' : '/images/logo-dark.png'} alt="Logo" className="h-10 w-auto" />
                     </div>
 
                     {/* Desktop Navigation */}
-                    <ul className="hidden lg:flex space-x-20 text-white uppercase text-sm mr-16">
+                    <ul className={`hidden lg:flex space-x-20 ${isHome ? 'text-white' : 'text-black'} uppercase text-sm mr-16`}>
                         {navItems.map((item) => (
                             <li
                                 key={item.label}
@@ -104,7 +129,7 @@ export default function Header() {
                             >
                                 {item.label}
                                 {active === item.target && (
-                                    <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-white"></span>
+                                    <span className={`absolute left-0 bottom-[-4px] w-full h-[2px] ${isHome ? 'bg-white' : 'bg-black'}`}></span>
                                 )}
                             </li>
                         ))}
@@ -115,7 +140,7 @@ export default function Header() {
                         <button
                             ref={hamburgerRef}
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="text-white text-2xl"
+                            className={`${isHome ? 'text-white' : 'text-black'} text-2xl`}
                         >
                             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
                         </button>
@@ -148,7 +173,7 @@ export default function Header() {
                         transition={{ duration: 0.3 }}
                         className="bg-[#c2c2c2ff] fixed top-16 left-0 right-0 lg:hidden z-45"
                     >
-                        <ul className="flex flex-col items-center text-white uppercase text-sm py-4">
+                        <ul className={`flex flex-col items-center ${isHome ? 'text-white' : 'text-black'} uppercase text-sm py-4`}>
                             {navItems.map((item) => (
                                 <li
                                     key={item.label}
