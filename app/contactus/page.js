@@ -102,19 +102,19 @@ export default function ContactPage() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
           >
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2">
+              <div className="w-8 h-8 border border-[#54889D] rounded-full flex items-center justify-center mr-2">
                 <FaPhone className="text-gray-600 text-sm" />
               </div>
               <div className="text-sm sm:text-base">+94 77 123 4567</div>
             </div>
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2">
+              <div className="w-8 h-8 border border-[#54889D] rounded-full flex items-center justify-center mr-2">
                 <FaEnvelope className="text-gray-600 text-sm" />
               </div>
               <div className="text-sm sm:text-base capitalize">hello@kettlex.io</div>
             </div>
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2">
+              <div className="w-8 h-8 border border-[#54889D] rounded-full flex items-center justify-center mr-2">
                 <FaMapMarkerAlt className="text-gray-600 text-sm" />
               </div>
               <div className="text-sm sm:text-base capitalize">
@@ -135,7 +135,7 @@ export default function ContactPage() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-xs sm:text-sm md:text-[14px]">Instagram</div>
+              <div className="text-xs sm:text-sm md:text-[14px] text-[#54889D]">Instagram</div>
               <FaInstagram className="ml-2 text-sm sm:text-base" />
             </motion.div>
             <motion.div
@@ -143,7 +143,7 @@ export default function ContactPage() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-xs sm:text-sm md:text-[14px]">Twitter</div>
+              <div className="text-xs sm:text-sm md:text-[14px] text-[#54889D]">Twitter</div>
               <FaTwitter className="ml-2 text-sm sm:text-base" />
             </motion.div>
             <motion.div
@@ -151,7 +151,7 @@ export default function ContactPage() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-xs sm:text-sm md:text-[14px]">Youtube</div>
+              <div className="text-xs sm:text-sm md:text-[14px] text-[#54889D]">Youtube</div>
               <FaYoutube className="ml-2 text-sm sm:text-base" />
             </motion.div>
             <motion.div
@@ -159,7 +159,7 @@ export default function ContactPage() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-xs sm:text-sm md:text-[14px]">Tiktok</div>
+              <div className="text-xs sm:text-sm md:text-[14px] text-[#54889D]">Tiktok</div>
               <FaTiktok className="ml-2 text-sm sm:text-base" />
             </motion.div>
           </motion.div>
@@ -294,7 +294,7 @@ export default function ContactPage() {
 
         {/* "What drives us" section - responsive layout for smaller screens */}
         <motion.div
-          className="flex flex-col justify-center items-center mt-16 sm:mt-20 w-full max-w-7xl"
+          className="flex flex-col justify-center items-center mt-16 sm:mt-20 w-full max-w-[90rem]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -322,9 +322,9 @@ export default function ContactPage() {
           </div>
 
           {/* Cards - stack on mobile, 2 columns on tablet, 3 columns on desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 mt-8 sm:mt-10 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-20 mt-8 sm:mt-10 w-full">
             <motion.div
-              className="flex flex-col justify-center items-center mt-4 sm:mt-10 bg-gray-200 p-6 sm:p-8 md:p-10 rounded-3xl"
+              className="h-[25rem] flex flex-col justify-center items-center mt-4 sm:mt-10 bg-gray-200 p-6 sm:p-8 md:p-10 rounded-3xl"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}

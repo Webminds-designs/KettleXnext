@@ -5,7 +5,7 @@ import { FaInstagram, FaTwitter, FaYoutube, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="bg-white text-black px-6 md:px-12 py-8">
+        <footer className="bg-white text-black px-6 md:px-[15rem] py-8">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
